@@ -27,7 +27,7 @@ python -m pip install -r requirements.txt
 
 The python script [Parallel_DA_RNN_training.py](/Parallel_DA_RNN_training.py) allows to train a parallel DA-RNN on gene expression time series data for all the gene regulatory networks generated in section 1.. The network parameters obtained for the training are saved in dedicated folders; also the matrix of input attention is saved for downstream analyses (see below). They are already provided in the [DATA](/DATA/) folder. The python script [My_allFunctions.py](/My_allFunctions.py) contains all the functions needed for training the DA-RNN and for the subsequent time series prediction.
 
-The R script [MatComparison.R](/MatComparison.R) computes the graph theory descriptors (Clustering coefficient, Betweenness, Hub Score) of the input attention matrices for each gene regulatory network used in our study.
+The R script [MatComparison.R](/MatComparison.R) computes the graph theory descriptors (Clustering coefficient, Betweenness, Hub Score) of the input attention matrices for each gene regulatory network used in our study. The resulting matrices are provided in the folder [Graph_Descriptor_Matrices](/DATA/Graph_Descriptor_Matrices).
 
 The analysis of Gaussian noise addition is provided in the python Jupyter notebook [DA_RNN_NOISE_ANALYSIS.ipynb](/DA_RNN_NOISE_ANALYSIS.ipynb); the results are in the [DATA](/DATA/) folder.
 
