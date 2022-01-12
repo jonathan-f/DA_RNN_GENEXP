@@ -25,14 +25,14 @@ python -m pip install -r requirements.txt
 
 # 3. Network training and analysis of the input attention layer
 
-The python script [Parallel_DA_RNN_training.py](/Parallel_DA_RNN_training.py) allows to train a parallel DA-RNN on gene expression time series data for all the gene regulatory networks generated in section 1.. The network parameters obtained for the training are saved in dedicated folders; also the matrix of input attention is saved for downstream analyses (see below). They are already provided in the [DATA](/DATA/) folder. The python script [My_allFunctions.py](/My_allFunctions.py) contains all the functions needed for training the DA-RNN and for the subsequent time series prediction.
+The python script [Parallel_DA_RNN_training.py](/Parallel_DA_RNN_training.py) allows to train a parallel DA-RNN on gene expression time series data for all the gene regulatory networks generated in section 1. The network parameters obtained for the training are saved in dedicated folders; also the matrix of the input attention is saved for downstream analyses (see below). The latter are also provided in the [Attention_Matrices](/DATA/Attention_Matrices) folder. The python script [My_allFunctions.py](/My_allFunctions.py) contains all the functions needed for training the DA-RNN and for the subsequent time series prediction.
 
 The R script [MatComparison.R](/MatComparison.R) computes the graph theory descriptors (Clustering coefficient, Betweenness, Hub Score) of the input attention matrices for each gene regulatory network used in our study. The resulting matrices are provided in the folder [Graph_Descriptor_Matrices](/DATA/Graph_Descriptor_Matrices).
 
 The analysis of Gaussian noise addition is provided in the python Jupyter notebook [DA_RNN_NOISE_ANALYSIS.ipynb](/DA_RNN_NOISE_ANALYSIS.ipynb); the results are in the [DATA](/DATA/) folder.
 
-The Pearson correlation between the matrices obtained from the graph theory descriptors and from the noise analysis is computed using the R script [matrixsim.R](/matrixsim.R), with inout data provided in the [matrices](/matrices/) folder.
+The Pearson correlation between the matrices obtained from the graph theory descriptors and from the noise analysis is computed using the R script [matrixsim.R](/matrixsim.R), with input data provided in the [matrices](/matrices/) folder.
 
-The PCA and clustering analyses of the matrices mentioned above is performed in the Jupyter notebook [DA_RNN_DOWNSTREAM_ANALYSIS.ipynb](/DA_RNN_DOWNSTREAM_ANALYSIS.ipynb). The dendrograms associated to the different clusterings are provided in the [newick_trees](/newick_trees/) folder in Newick tree format. and the distances between dendrograms are computed using the R script [treeanalysis.R](/treeanalysis.R).
+The PCA and clustering analyses on the matrices mentioned above is performed in the Jupyter notebook [DA_RNN_DOWNSTREAM_ANALYSIS.ipynb](/DA_RNN_DOWNSTREAM_ANALYSIS.ipynb). The dendrograms associated to the different clusterings are provided in the [newick_trees](/newick_trees/) folder in Newick tree format. The distances between dendrograms are computed using the R script [treeanalysis.R](/treeanalysis.R).
 
 
