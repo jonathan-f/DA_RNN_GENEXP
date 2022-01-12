@@ -1,0 +1,34 @@
+# Configuration of the executable
+TARGET = GeneProteinsDynamic
+#ODIR=obj
+RUNDIR = RUN
+
+
+# Compiler configuration
+CXX      = gcc -g
+#CXXFLAGS = -Wall -Werror -Wextra -Wshadow -g
+CXXFLAGS = -Wall -Wextra -Wshadow -O3
+COMP = -c
+INC = -I ~/include -L /usr/local/lib
+INC_LIB = -lgsl -lgslcblas -lm
+OBJCode = GeneProteinsDynamic.o
+OBJFUn = functions.o
+
+CCODE= GeneProteinsDynamic.c
+
+CFUN = functions.c
+
+
+Default: GeneProteinsDynamic.o functions.o
+	$(CXX) GeneProteinsDynamic.o functions.o -o $(TARGET) $(INC) $(INC_LIB)
+
+GeneProteinsDynamic.o: $(CCODE)
+	$(CXX) $(CXXFLAGS) $(COMP) $(CCODE)
+
+functions.o : $(CFUN)
+	$(CXX) $(CXXFLAGS) $(COMP) $(CFUN)
+
+# clean
+clean:
+	@echo "cleaning all the shitty .o files ..."
+	@rm *.o

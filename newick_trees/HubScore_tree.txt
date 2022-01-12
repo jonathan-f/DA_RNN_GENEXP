@@ -1,0 +1,1 @@
+(((((((MasterRegulator:2.83,ExternalSignal_nr10_na10:2.83):1.60,Oscillating_nr10_na10:4.43):0.93,(ExternalSignal_nr5_na5:3.43,SparseConnection:3.43):1.92):0.41,(Oscillating_nr1_na1:4.12,FullyRepressed:4.12):1.64):0.97,(ExternalSignal_nr1_na1:3.34,mediumConnection:3.34):3.39):1.89,(FullyConnected:3.20,Oscillating_nr5_na5:3.20):5.41):4.70,Oscillating_nr15_na15:13.31);
